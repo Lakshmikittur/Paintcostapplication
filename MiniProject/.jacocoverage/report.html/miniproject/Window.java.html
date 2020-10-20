@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Window.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;MiniProject&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">miniproject</a> &gt; <span class="el_source">Window.java</span></div><h1>Window.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package miniproject;
+
+import java.util.Scanner;
+
+/**
+ * This class is related to extra space of windows
+ *
+ * @author ADITI RAO
+ */
+<span class="nc" id="L15">public class Window {</span>
+
+<span class="nc" id="L17">    Scanner in = new Scanner(System.in);</span>
+
+    /**
+     * Sets the value to the called variable
+     *
+     * @return nextDouble
+     */
+    double setValue() {
+
+<span class="nc" id="L26">        return in.nextDouble();</span>
+    }
+
+    /**
+     * Called number of windows in the room
+     *
+     * @return noOfWindows
+     */
+    double getNoOfWindows() {
+
+        double n;
+
+<span class="nc" id="L38">        System.out.println(&quot;Enter the number of windows&quot;);</span>
+<span class="nc" id="L39">        n = setValue();</span>
+<span class="nc" id="L40">        return n;</span>
+    }
+
+    /**
+     * Calculates the length of the window
+     *
+     * @return windowLength
+     */
+    double getWindowlength() {
+
+        double windowlength;
+
+<span class="nc" id="L52">        System.out.println(&quot;Enter the Length of window&quot;);</span>
+<span class="nc" id="L53">        windowlength = setValue();</span>
+<span class="nc" id="L54">        return windowlength;</span>
+    }
+
+    /**
+     * Calculate the breadth of windows
+     *
+     * @return windowsBreadth
+     */
+    double getWindowBreadth() {
+
+        double windowBreadth;
+
+<span class="nc" id="L66">        System.out.println(&quot;Enter the Breadth of the window&quot;);</span>
+<span class="nc" id="L67">        windowBreadth = setValue();</span>
+<span class="nc" id="L68">        return windowBreadth;</span>
+
+    }
+
+    /**
+     * This function gets all the values required for area calculation
+     * It also calls the getWindowArea() function
+     */
+    double getWindowValues() {
+<span class="nc" id="L77">        double noOfWindows = getNoOfWindows();</span>
+<span class="nc" id="L78">        double windowLength = getWindowlength();</span>
+<span class="nc" id="L79">        double windowBreadth = getWindowBreadth();</span>
+        
+<span class="nc" id="L81">        return getWindowArea(noOfWindows , windowLength , windowBreadth);</span>
+    }
+
+    /**
+     * Calculates the window area
+     * @param noOfWindows
+     * @param windowLength
+     * @param windowBreadth
+     * @return totalArea
+     */
+     public double getWindowArea(double noOfWindows , double windowLength , double windowBreadth) {
+                
+<span class="nc" id="L93">        double totalArea = ( noOfWindows * windowLength * windowBreadth);</span>
+
+<span class="nc" id="L95">        return totalArea;</span>
+    }
+
+} //end of Window class
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

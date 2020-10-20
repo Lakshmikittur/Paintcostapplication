@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>MiniProject.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;MiniProject&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">miniproject</a> &gt; <span class="el_source">MiniProject.java</span></div><h1>MiniProject.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package miniproject;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author ADITI RAO
+ */
+<span class="nc" id="L14">public class MiniProject {</span>
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+<span class="fc" id="L21">    }</span>
+}
+
+/**
+ * This class computes the Total paintable area of either the whole building or
+ * a room
+ *
+ * @author ADITI RAO
+ */
+class Building {
+
+    double totalPaintArea[];
+    final Scanner in = new Scanner(System.in);
+
+    /**
+     * This function gets the user to get number of rooms &amp; their dimensions to
+     * paint
+     *
+     * @author ADITI RAO
+     * @return totalPaintArea
+     */
+    double[] menu() {
+        System.out.println(&quot;Do you want to paint?Enter\n1] for a room\n2] for a building&quot;);
+        int choice = in.nextInt();
+
+        if (choice == 1) {
+
+            totalPaintArea = new double[1];
+            Room r = new Room();
+            System.out.println(&quot;Room 1&quot;);
+
+            totalPaintArea[0] = r.getPaintableArea();
+
+            return totalPaintArea;
+
+        } else if (choice == 2) {
+
+            System.out.println(&quot;Enter the number of rooms you want to paint:&quot;);
+            int n = in.nextInt();
+
+            Room[] r = new Room[n];
+            totalPaintArea = new double[n];
+
+            for (int index = 0; index &lt; n; index++) {
+
+                System.out.println(&quot;Room &quot; + (index + 1));
+                totalPaintArea[index] = r.getPaintableArea();
+
+            }
+
+            return totalPaintArea;
+
+        } else {
+
+            System.out.println(&quot;Enter correct choice&quot;);
+            return null;
+        }
+    }
+
+} //end of class Building
+
+
+
+
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>
